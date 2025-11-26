@@ -1,0 +1,6 @@
+numpy<2.0
+kagglehub
+ultralytics
+opencv-python-headless
+pandas
+matplotlib

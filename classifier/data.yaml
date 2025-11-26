@@ -1,0 +1,14 @@
+path: ./data
+
+train: images/train
+val: images/val
+
+names:
+  0: Motorcycle
+  1: Auto
+  2: Car
+  3: Bus
+  4: LCV
+  5: Truck
+  6: Tractor
+  7: Multi-Axle
