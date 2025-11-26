@@ -1,6 +1,7 @@
-numpy<2.0
+numpy>=1.23.5,<2.0.0
+matplotlib>=3.3.0
 kagglehub
 ultralytics
-opencv-python-headless
+opencv-python-headless==4.8.0.74
 pandas
-matplotlib
+requests>=2.23.0
