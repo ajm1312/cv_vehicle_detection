@@ -1,13 +1,16 @@
-# helper function to download and format the dataset for the YOLO model to train off of.
-
 import kagglehub
 import os
 import shutil
 import glob
 import random
-from tqdm import tqdm  # pip install tqdm
+from tqdm import tqdm
 
 def move_files(file_list, split_name):
+    ''''
+    Helper function to move files downloaded from Kaggle.
+    file_list:
+    split_name:
+    '''
     for img_src, txt_src in tqdm(file_list):
         f_name = os.path.basename(img_src)
         l_name = os.path.basename(txt_src)
@@ -19,8 +22,10 @@ def move_files(file_list, split_name):
 
 if __name__ == "__main__":
 
+    # downloading data from Kaggle.
     path = kagglehub.dataset_download("sakshamjn/vehicle-detection-8-classes-object-detection")
 
+    # Make new 
     images = os.path.join(path, 'train', 'images')
     labels = os.path.join(path, 'train', 'labels')
 

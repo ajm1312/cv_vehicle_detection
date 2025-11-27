@@ -3,7 +3,6 @@ import sys
 from ultralytics import YOLO
 import yaml
 from argparse import Namespace
-import kagglehub
 
 if __name__ == "__main__":
 
@@ -39,7 +38,6 @@ if __name__ == "__main__":
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
         else:
-            # Break the loop if the video ends
             break
     
 
