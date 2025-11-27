@@ -1,0 +1,18 @@
+path: ./data
+
+train: train/images/train
+val: train/images/val
+
+names:
+  0: Motorcycle
+  1: Auto
+  2: Car
+  3: Bus
+  4: LCV
+  5: Truck
+  6: Tractor
+  7: Multi-Axle
+
+model_path: "./runs/detect/vehicle_custom_model/weights/best.pt"
+
+video_path: ./data/test/test_video.mp4

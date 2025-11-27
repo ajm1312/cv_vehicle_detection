@@ -1,10 +1,13 @@
-Metadata-Version: 1.0
-Name: image-classification
+Metadata-Version: 2.4
+Name: image_classification
 Version: 1.0
-Summary: UNKNOWN
-Home-page: UNKNOWN
 Author: Andrew Mitchell
-Author-email: UNKNOWN
-License: UNKNOWN
-Description: UNKNOWN
-Platform: UNKNOWN
+Requires-Dist: numpy<2.0.0,>=1.23.5
+Requires-Dist: matplotlib>=3.3.0
+Requires-Dist: kagglehub
+Requires-Dist: ultralytics
+Requires-Dist: opencv-python
+Requires-Dist: pandas
+Requires-Dist: requests>=2.23.0
+Dynamic: author
+Dynamic: requires-dist

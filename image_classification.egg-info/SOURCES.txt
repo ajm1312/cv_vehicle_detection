@@ -1,4 +1,7 @@
 setup.py
+classifier/format.py
+classifier/test.py
+classifier/train.py
 image_classification.egg-info/PKG-INFO
 image_classification.egg-info/SOURCES.txt
 image_classification.egg-info/dependency_links.txt

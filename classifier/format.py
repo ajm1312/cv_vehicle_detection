@@ -13,9 +13,9 @@ def move_files(file_list, split_name):
         l_name = os.path.basename(txt_src)
         
         # MOVE Image
-        shutil.move(img_src, f"{BASE_DIR}/images/{split_name}/{f_name}")
+        shutil.move(img_src, f"{BASE_DIR}/train/images/{split_name}/{f_name}")
         # MOVE Label
-        shutil.move(txt_src, f"{BASE_DIR}/labels/{split_name}/{l_name}")
+        shutil.move(txt_src, f"{BASE_DIR}/train/labels/{split_name}/{l_name}")
 
 if __name__ == "__main__":
 
@@ -27,8 +27,8 @@ if __name__ == "__main__":
     BASE_DIR = "data" 
 
     for split in ['train', 'val']:
-        os.makedirs(f"{BASE_DIR}/images/{split}", exist_ok=True)
-        os.makedirs(f"{BASE_DIR}/labels/{split}", exist_ok=True)
+        os.makedirs(f"{BASE_DIR}/train/images/{split}", exist_ok=True)
+        os.makedirs(f"{BASE_DIR}/train/labels/{split}", exist_ok=True)
 
     all_images = glob.glob(os.path.join(images, "*"))
     pairs = []
@@ -50,3 +50,23 @@ if __name__ == "__main__":
 
     move_files(train_pairs, 'train')
     move_files(val_pairs, 'val')
+
+    # Downloading and moving video file
+    video_path = kagglehub.dataset_download("chicicecream/720p-road-and-traffic-video-for-object-detection")
+
+    print("Path to dataset files:", video_path)
+
+    TEST_DIR = f"{BASE_DIR}/test"
+    os.makedirs(f"{BASE_DIR}/test")
+
+    videos = glob.glob(os.path.join(video_path, "**", "*.mp4"), recursive=True)
+
+    if videos:
+
+        vid_src = videos[0]
+
+        dest_path = os.path.join(TEST_DIR, "test_video.mp4")
+        
+        shutil.move(vid_src, dest_path)
+
+    
