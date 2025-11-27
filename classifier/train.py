@@ -7,7 +7,7 @@ results = model.train(
     epochs=50,
     imgsz=640,
     batch=16,
-    name='vehicle_custom_model',
+    name='model',
     cls=4.0,
     dropout=0.1
 )
