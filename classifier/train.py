@@ -1,6 +1,6 @@
 from ultralytics import YOLO
 
-model = YOLO('yolov8m.pt')
+model = YOLO('yolo11s.pt')
 
 results = model.train(
     data='config.yaml',
@@ -8,6 +8,4 @@ results = model.train(
     imgsz=640,
     batch=16,
     name='model',
-    cls=4.0,
-    dropout=0.1
 )

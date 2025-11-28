@@ -13,6 +13,6 @@ names:
   6: Tractor
   7: Multi-Axle
 
-model_path: "./runs/detect/model1/weights/best.pt"
+model_path: "./runs/detect/yolo11s/weights/best.pt"
 
 video_path: ./data/test/test_video.mp4
